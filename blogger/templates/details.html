@@ -1,0 +1,6 @@
+<h2>detail View</h2>
+
+<a href="{% url 'details' object.id %}">
+	<h2><a href="#">{{ object.title }}</a></h2>
+	<h5><strong>{{ object.author }}</strong> | {{ object.created}}</h5>
+	<p>{{ object.body | safe }}</p>

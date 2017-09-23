@@ -1,0 +1,15 @@
+
+
+<html>
+    <head>
+        <title>My Blog</title>
+    </head>
+    <body>
+    <h1><strong>My Blog</strong></h1>
+{% for object in object_list %}
+	<h2><a href="{% url 'details' pk=object.id %}">{{ object.title }}</a></h2>
+	<h5><strong>{{ object.author }}</strong> | {{ object.created}}</h5>
+	<p>{{ object.body | safe }}</p>
+{% endfor %}
+    </body>
+</html>
